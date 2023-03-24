@@ -1,9 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	var str1 string
 	str1 = "my name is nan!"
-	fmt.Printf("%s", str1)
+	fmt.Printf("%s\n", str1)
+
+	str2 := "test git"
+	fmt.Printf("%d\n", strings.Index(str2, "t"))
 }
