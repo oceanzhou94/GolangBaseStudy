@@ -11,5 +11,5 @@ func main() {
 	fmt.Printf("%s\n", str1)
 
 	str2 := "test git"
-	fmt.Printf("%d\n", strings.Index(str2, "t"))
+	fmt.Printf("%d\n", strings.LastIndex(str2, "t"))
 }
