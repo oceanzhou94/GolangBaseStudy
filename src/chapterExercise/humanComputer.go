@@ -15,16 +15,16 @@ func main() {
 	)
 
 	fmt.Printf("please input your name: ")
-	fmt.Scanln(&name)
+	_, _ = fmt.Scanln(&name)
 
 	fmt.Printf("please input your age: ")
-	fmt.Scanln(&age)
+	_, _ = fmt.Scanln(&age)
 
 	fmt.Printf("please input your sex: ")
-	fmt.Scanln(&sex)
+	_, _ = fmt.Scanln(&sex)
 
 	fmt.Printf("please input your address: ")
-	fmt.Scanln(&address)
+	_, _ = fmt.Scanln(&address)
 
 	fmt.Printf("the following is your personal message:\n")
 	fmt.Printf("\t   name:  %s\n", name)
