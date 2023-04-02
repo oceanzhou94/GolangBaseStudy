@@ -126,7 +126,6 @@ func phoneChagre() {
 	for userChoice != 0 {
 		chargeMenu()
 		fmt.Printf("请输入您的选择：")
-
 		_, inputError := fmt.Scanln(&userChoice)
 		//对用户输入校验
 		if inputError != nil {
