@@ -1,82 +1,134 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-type ListNode struct {
-	Value int
-	Next  *ListNode
+// Node 定义单链表节点结构体
+type Node struct {
+	data int   // 数据域
+	next *Node // 指针域
 }
 
-// 在链表尾部插入元素
-func (head *ListNode) Insert(value int) {
-	newNode := &ListNode{Value: value}
-	if head.Next == nil {
-		head.Next = newNode
-	} else {
-		lastNode := head
-		for lastNode.Next != nil {
-			lastNode = lastNode.Next
-		}
-		lastNode.Next = newNode
-	}
+// LinkedList 定义单链表结构体
+type LinkedList struct {
+	head *Node // 头节点
 }
 
-// 在链表中查找元素
-func (head *ListNode) Search(value int) *ListNode {
-	currentNode := head
-	for currentNode != nil {
-		if currentNode.Value == value {
-			return currentNode
-		}
-		currentNode = currentNode.Next
-	}
-	return nil
-}
+// Add 添加节点到链表末尾
+func (l *LinkedList) Add(value int) {
+	newNode := &Node{data: value, next: nil}
 
-// 在链表中删除元素
-func (head *ListNode) Delete(value int) {
-	if head.Next == nil {
+	// 如果链表为空，则新节点为头节点
+	if l.head == nil {
+		l.head = newNode
 		return
 	}
-	if head.Next.Value == value {
-		head.Next = head.Next.Next
+
+	// 遍历到链表尾部，将新节点加入到末尾
+	last := l.head
+	for last.next != nil {
+		last = last.next
+	}
+	last.next = newNode
+}
+
+// Insert 在指定位置插入节点
+func (l *LinkedList) Insert(value int, pos int) {
+	newNode := &Node{data: value, next: nil}
+
+	// 如果链表为空，则新节点为头节点
+	if l.head == nil {
+		l.head = newNode
 		return
 	}
-	currentNode := head.Next
-	for currentNode.Next != nil {
-		if currentNode.Next.Value == value {
-			currentNode.Next = currentNode.Next.Next
-			return
+
+	// 如果要插入到链表头部，则直接将新节点作为头节点
+	if pos == 1 {
+		newNode.next = l.head
+		l.head = newNode
+		return
+	}
+
+	// 遍历到指定位置，将新节点插入到链表中
+	current := l.head
+	var prev *Node
+	for i := 1; i < pos; i++ {
+		prev = current
+		current = current.next
+		if current == nil {
+			break
 		}
-		currentNode = currentNode.Next
+	}
+	prev.next = newNode
+	newNode.next = current
+}
+
+// Remove 删除指定节点
+func (l *LinkedList) Remove(value int) {
+	// 如果链表为空，则直接返回
+	if l.head == nil {
+		return
+	}
+
+	// 如果要删除的节点是头节点
+	if l.head.data == value {
+		l.head = l.head.next
+		return
+	}
+
+	// 遍历链表，删除指定节点
+	current := l.head
+	var prev *Node
+	for current != nil && current.data != value {
+		prev = current
+		current = current.next
+	}
+	if current != nil {
+		prev.next = current.next
 	}
 }
 
-// 遍历链表
-func (head *ListNode) Traverse() {
-	currentNode := head.Next
-	for currentNode != nil {
-		fmt.Println(currentNode.Value)
-		currentNode = currentNode.Next
+// Length 获取链表长度
+func (l *LinkedList) Length() int {
+	length := 0
+	current := l.head
+	for current != nil {
+		length++
+		current = current.next
 	}
+	return length
+}
+
+// Print 打印链表
+func (l *LinkedList) Print() {
+	current := l.head
+	for current != nil {
+		fmt.Printf("%d ", current.data)
+		current = current.next
+	}
+	fmt.Println()
 }
 
 func main() {
-	head := &ListNode{}
-	head.Insert(1)
-	head.Insert(2)
-	head.Insert(3)
-	head.Insert(4)
-	head.Insert(5)
+	// 创建一个链表对象
+	l := LinkedList{}
 
-	fmt.Println("Traverse linked list:")
-	head.Traverse()
+	// 添加节点
+	l.Add(1)
+	l.Add(2)
+	l.Add(3)
 
-	fmt.Println("Search node:")
-	fmt.Println(head.Search(4))
-	fmt.Println(head.Search(6))
+	// 在指定位置插入节点
+	l.Insert(4, 1)
+	l.Insert(5, 3)
 
-	fmt.Println("Delete node:")
-	head.Delete(3)
-	head.Traverse()
+	// 删除指定节点
+	l.Remove(3)
+
+	// 打印链表
+	l.Print()
+
+	// 获取链表长度
+	fmt.Println("链表长度为：", l.Length())
 }

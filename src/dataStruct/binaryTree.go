@@ -1,107 +1,111 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-type TreeNode struct {
-	Value int
-	Left  *TreeNode
-	Right *TreeNode
+// BinaryTree 二叉树结构体
+type BinaryTree struct {
+	Val   int
+	Left  *BinaryTree
+	Right *BinaryTree
 }
 
-// 插入节点
-func (node *TreeNode) Insert(value int) {
-	if node == nil {
-		return
+// Insert 插入节点
+func (bt *BinaryTree) Insert(val int) *BinaryTree {
+	// 如果树为空，则创建一个节点并返回
+	if bt == nil {
+		return &BinaryTree{Val: val}
 	}
-	if value < node.Value {
-		if node.Left == nil {
-			node.Left = &TreeNode{Value: value}
-		} else {
-			node.Left.Insert(value)
-		}
-	} else {
-		if node.Right == nil {
-			node.Right = &TreeNode{Value: value}
-		} else {
-			node.Right.Insert(value)
-		}
+
+	// 如果插入的值小于当前节点，则将其插入左子树
+	if val < bt.Val {
+		bt.Left = bt.Left.Insert(val)
+		return bt
 	}
+
+	// 如果插入的值大于等于当前节点，则将其插入右子树
+	bt.Right = bt.Right.Insert(val)
+	return bt
 }
 
-// 查找节点
-func (node *TreeNode) Search(value int) bool {
-	if node == nil {
-		return false
-	}
-	if value < node.Value {
-		return node.Left.Search(value)
-	} else if value > node.Value {
-		return node.Right.Search(value)
-	} else {
-		return true
-	}
-}
-
-// 删除节点
-func (node *TreeNode) Delete(value int) *TreeNode {
-	if node == nil {
+// Search 查找节点
+func (bt *BinaryTree) Search(val int) *BinaryTree {
+	// 如果节点为空，则返回 nil
+	if bt == nil {
 		return nil
 	}
-	if value < node.Value {
-		node.Left = node.Left.Delete(value)
-	} else if value > node.Value {
-		node.Right = node.Right.Delete(value)
-	} else {
-		if node.Left == nil && node.Right == nil {
-			return nil
-		} else if node.Left == nil {
-			return node.Right
-		} else if node.Right == nil {
-			return node.Left
-		} else {
-			minNode := node.Right.MinNode()
-			node.Value = minNode.Value
-			node.Right = node.Right.Delete(minNode.Value)
-		}
+
+	// 如果查找的值等于当前节点的值，则返回当前节点
+	if bt.Val == val {
+		return bt
 	}
-	return node
+
+	// 如果查找的值小于当前节点的值，则在左子树中查找
+	if val < bt.Val {
+		return bt.Left.Search(val)
+	}
+
+	// 如果查找的值大于当前节点的值，则在右子树中查找
+	return bt.Right.Search(val)
 }
 
-// 遍历二叉树
-func (node *TreeNode) Traverse() {
-	if node == nil {
-		return
+// PreorderTraversal 前序遍历
+func (bt *BinaryTree) PreorderTraversal() []int {
+	if bt == nil {
+		return []int{}
 	}
-	node.Left.Traverse()
-	fmt.Println(node.Value)
-	node.Right.Traverse()
+
+	result := []int{bt.Val}
+	result = append(result, bt.Left.PreorderTraversal()...)
+	result = append(result, bt.Right.PreorderTraversal()...)
+
+	return result
 }
 
-// 获取最小节点
-func (node *TreeNode) MinNode() *TreeNode {
-	for node.Left != nil {
-		node = node.Left
+// InorderTraversal 中序遍历
+func (bt *BinaryTree) InorderTraversal() []int {
+	if bt == nil {
+		return []int{}
 	}
-	return node
+
+	result := bt.Left.InorderTraversal()
+	result = append(result, bt.Val)
+	result = append(result, bt.Right.InorderTraversal()...)
+
+	return result
+}
+
+// PostorderTraversal 后序遍历
+func (bt *BinaryTree) PostorderTraversal() []int {
+	if bt == nil {
+		return []int{}
+	}
+
+	result := bt.Left.PostorderTraversal()
+	result = append(result, bt.Right.PostorderTraversal()...)
+	result = append(result, bt.Val)
+
+	return result
 }
 
 func main() {
-	root := &TreeNode{Value: 5}
-	root.Insert(3)
-	root.Insert(7)
-	root.Insert(1)
-	root.Insert(9)
-	root.Insert(2)
-	root.Insert(4)
+	bt := &BinaryTree{Val: 5}
+	bt.Insert(3)
+	bt.Insert(8)
+	bt.Insert(1)
+	bt.Insert(4)
+	bt.Insert(7)
+	bt.Insert(9)
 
-	fmt.Println("Traverse tree:")
-	root.Traverse()
+	fmt.Println("前序遍历：", bt.PreorderTraversal())
+	fmt.Println("中序遍历：", bt.InorderTraversal())
+	fmt.Println("后序遍历：", bt.PostorderTraversal())
 
-	fmt.Println("Search node:")
-	fmt.Println(root.Search(4))
-	fmt.Println(root.Search(8))
-
-	fmt.Println("Delete node:")
-	root = root.Delete(3)
-	root.Traverse()
+	node := bt.Search(7)
+	if node == nil {
+		fmt.Println("未找到节点")
+	} else {
+		fmt.Println("找到节点：", node.Val)
+	}
 }
