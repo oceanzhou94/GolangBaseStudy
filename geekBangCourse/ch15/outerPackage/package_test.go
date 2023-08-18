@@ -1,7 +1,7 @@
 package outerPackage
 
 import (
-	"geekBangCourse/ch15/area"
+	"base_study/geekBangCourse/ch15/area"
 	"testing"
 )
 

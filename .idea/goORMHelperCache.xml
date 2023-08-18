@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GoORMHelperCache">
+    <option name="schemaMapping">
+      <map>
+        <entry key="BinaryTree">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/dataStruct/binaryTree.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Dog">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/geekBangCourse/ch12/extension/extension_test.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="GoProgrammer">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/geekBangCourse/ch11/interface/interface_test.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LinkedList">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/dataStruct/linkList.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Node">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/dataStruct/linkList.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Pet">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/geekBangCourse/ch12/extension/extension_test.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Queue">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/dataStruct/queen.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Stack">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/dataStruct/stack.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="cat">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/basicGrammar/interfaceType.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="dog">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/basicGrammar/interfaceType.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="person">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/basicGrammar/structType.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="student">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/src/basicGrammar/structType.go" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="scannedPathMapping">
+      <map>
+        <entry key="file://$PROJECT_DIR$/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1692375654957" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/Hello/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1680272470255" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/basicGrammar/interfaceType.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1680436562197" />
+              <option name="schema">
+                <list>
+                  <option value="dog" />
+                  <option value="cat" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/basicGrammar/pointerType.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1680096680336" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/basicGrammar/stringType.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1680097486652" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/basicGrammar/structType.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1680182451871" />
+              <option name="schema">
+                <list>
+                  <option value="person" />
+                  <option value="student" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/basicGrammar/variable.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1680093620875" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/chapterExercise/humanComputer.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1680000625911" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/chapterExercise/onlineCustomerService.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1680361917524" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/chapterExercise/personalBMI.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1679801978774" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/dataStruct/binaryTree.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681045507249" />
+              <option name="schema">
+                <list>
+                  <option value="BinaryTree" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/dataStruct/linkList.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681044136263" />
+              <option name="schema">
+                <list>
+                  <option value="Node" />
+                  <option value="LinkedList" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/dataStruct/queen.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681044552813" />
+              <option name="schema">
+                <list>
+                  <option value="Queue" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/dataStruct/sort.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681045118372" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/dataStruct/stack.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681044275070" />
+              <option name="schema">
+                <list>
+                  <option value="Stack" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch10/func/func_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681647935590" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch11/interface/interface_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681649215938" />
+              <option name="schema">
+                <list>
+                  <option value="GoProgrammer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch12/extension/extension_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681651677964" />
+              <option name="schema">
+                <list>
+                  <option value="Pet" />
+                  <option value="Dog" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch13/empty_interface/empty_interface_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681652509097" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch14/error/error_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681654053244" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch15/area/getArea.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681736766885" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch15/outerPackage/package_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681736718873" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch16/goroutine/groutine_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681737227815" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch16/share_mem/share_mem_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681737851852" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/geekBangCourse/ch2/fib/fib_test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1681221805856" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/src/stringsOperation/stringOperation.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1679753955297" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/test.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1692375556160" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/test/testModule.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1692375655121" />
+            </ScannedPath>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="tableStructMapping">
+      <map>
+        <entry key="binary_tree" value="BinaryTree" />
+        <entry key="binary_trees" value="BinaryTree" />
+        <entry key="cat" value="cat" />
+        <entry key="cats" value="cat" />
+        <entry key="dog" value="Dog" />
+        <entry key="dogs" value="Dog" />
+        <entry key="go_programmer" value="GoProgrammer" />
+        <entry key="go_programmers" value="GoProgrammer" />
+        <entry key="linked_list" value="LinkedList" />
+        <entry key="linked_lists" value="LinkedList" />
+        <entry key="node" value="Node" />
+        <entry key="nodes" value="Node" />
+        <entry key="person" value="person" />
+        <entry key="persons" value="person" />
+        <entry key="pet" value="Pet" />
+        <entry key="pets" value="Pet" />
+        <entry key="queue" value="Queue" />
+        <entry key="queues" value="Queue" />
+        <entry key="stack" value="Stack" />
+        <entry key="stacks" value="Stack" />
+        <entry key="student" value="student" />
+        <entry key="students" value="student" />
+      </map>
+    </option>
+    <option name="lastTimeChecked" value="1692375236481" />
+  </component>
+</project>
